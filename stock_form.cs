@@ -317,5 +317,10 @@ namespace Oto_Servis
                 MessageBox.Show("Lütfen önce silmek istediğiniz ürünü veya ürünleri seçin", "Seçim bulunamadı");
             }
         }
+
+        private void stock_form_SizeChanged(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(ClientSize.Width.ToString() + " " + ClientSize.Height.ToString() );
+        }
     }
 }
