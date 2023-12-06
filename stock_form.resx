@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        QAAAC0ABGxbo1gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGDASURBVHhe7Z0H
+        PwAACz8BScUy+wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGDASURBVHhe7Z0H
         nBxnef/dwHRMN5CYkgRTQhJiElIw1ZKrXGSdLHdb5Wyw3CiWTDUlhASCQyAJzdQ/CTHGBYO7LdtILtLV
         vbq7t7e3tzu93Klb7eb/vqt37dXcc7e7t9Pn9/18vh+DpN2dmZ19fs+8M/POYQAAANLHE0NDr+zqz72v
         K5M9u6svd3VXf/ZrzJ+xP7tvS392C/vfo0yJ/f1W9l+nzj3s39jd/dn/FW8FAAAAgKiRyWResaV35ENd
@@ -558,31 +558,10 @@
   <metadata name="urunKodu.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="marka.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="urunAdi.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="miktar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="birim.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="adetFiyat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="barkod.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="urunKodu.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPjSURBVFhH7ZJd
+        6wAAAOsBK2zXwgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPjSURBVFhH7ZJd
         bJNVHMZf44VXGgKLE5nREM0uwBuziIkzwjSEJkYYZhC6BQWTKRrjhSaagrEwBLtMmgj7KO0qunVbZsaI
         MLCIw5F9kSpjQNfR0a3r5pp2/Vg/V7q+ezx938O6Nse1MrZw4ZP80vPx/5/n6Tkv99AIvcVPzHSXbIl1
         S4sWwmn85ajVats7NBoumseOCdOlIyHDgfdZPXP0SLfDIF1LLRNCZ0ku3108wfcUIx1WywTuWMNMgn8d
@@ -605,7 +584,7 @@
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJISURBVFhH3ZfP
+        sAAAALABFGqraQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJISURBVFhH3ZfP
         S9tgGMe7v8Dh2MVdah0bOud1MJGd9uvkEAri2Jq0dqigdyEpnsZsyrysFtGDJwX1oDMrg52GsHmZ4B+w
         44anqsmbqJtt9rz6DNI3b01W8+awL3wp7ds8nw9JmqSxf028SJ60z5o70F9QJ2h7Fkzn4RJxhtYtJ61b
         tfSmvfbqU6UFxwZLYtaQYViNHd6of6HPNyxn+IPtrW6v4mj/xGf2r8LQQxbC9u68D7S+xzjeP/ESecwD
@@ -621,7 +600,7 @@
   <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        +QAAAPkBHYYEgQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALrSURBVFhHxZbN
+        +AAAAPgBz8HmZQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALrSURBVFhHxZbN
         ThNRFMe704VhrQ/gEre4Y9q5bZ2ZIsZXwNcgbnwHWPIcJCaaWOhWoNNSSCpt4soYArZRY7ie/2kvnrlz
         KKB0vMkvae+cez7uxzmnZK29EUdRdG+4EkWDJNkcrCTvB42kR5xP6fEcfYMMZDUdGuqk5FO9/mjQiDdO
         GskZGbI3YSIbb2CtplOiToJ+ENyniN6QwpFv4BaMoAO6NBtAnezH8UPa0pai8O8gXWm1+lizlZsYxvEi

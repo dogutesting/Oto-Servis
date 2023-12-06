@@ -16,8 +16,9 @@ namespace Oto_Servis
     public partial class aracEkle_form : Form
     {
         MySqlConnection con;
+        string resourcesFolderPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources");
 
-        public aracEkle_form()
+    public aracEkle_form()
         {
             InitializeComponent();
             ConnectionClass conClass = new ConnectionClass();
@@ -57,7 +58,7 @@ namespace Oto_Servis
             yakitCinsiComboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
 
             string jsonFromFile;
-            using(var reader = new StreamReader(@"C:\Users\asdwe\Desktop\oto_demo\Oto Servis\json.txt"))
+            using(var reader = new StreamReader(Path.Combine(resourcesFolderPath, "json.txt")))
             {
                 jsonFromFile = reader.ReadToEnd();
             }
@@ -96,7 +97,7 @@ namespace Oto_Servis
             modelComboBox.Text = string.Empty;
 
             string jsonFromFile;
-            using (var reader = new StreamReader(@"C:\Users\asdwe\Desktop\oto_demo\Oto Servis\json.txt"))
+            using (var reader = new StreamReader(Path.Combine(resourcesFolderPath, "json.txt")))
             {
                 jsonFromFile = reader.ReadToEnd();
             }

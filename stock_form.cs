@@ -74,7 +74,7 @@ namespace Oto_Servis
             MySqlDataReader dataReader = cmd.ExecuteReader();
             while (dataReader.Read())
             {
-                dataGridView1.Rows.Add(dataReader["marka"].ToString(), dataReader["urunAdi"].ToString(), dataReader["miktar"].ToString(), dataReader["birim"].ToString(), dataReader["fiyat"].ToString(), dataReader["barkod"].ToString(), dataReader["id"].ToString());
+                dataGridView1.Rows.Add(dataReader["marka"].ToString(), dataReader["urunAdi"].ToString(), dataReader["birim"].ToString(), dataReader["miktar"].ToString(), dataReader["fiyat"].ToString(), dataReader["barkod"].ToString(), dataReader["id"].ToString());
             }
             con.Close();
         }

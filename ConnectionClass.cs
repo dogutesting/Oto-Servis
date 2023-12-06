@@ -11,7 +11,7 @@ namespace Oto_Servis
     {
         
         private string server = "localhost";
-        private string db = "otoservis";
+        private string db = "otoservis_veritabani";
         private string id = "root";
         private string pass = "";
 
