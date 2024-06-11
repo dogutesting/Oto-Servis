@@ -209,8 +209,7 @@ namespace Oto_Servis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            stockEkle_form ac = new stockEkle_form();
-            ac.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -321,6 +320,12 @@ namespace Oto_Servis
         private void stock_form_SizeChanged(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(ClientSize.Width.ToString() + " " + ClientSize.Height.ToString() );
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            stockEkle_form ac = new stockEkle_form();
+            ac.Show();
         }
     }
 }
