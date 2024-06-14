@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,8 +15,12 @@ using MySql.Data.MySqlClient;
 
 namespace Oto_Servis
 {
+
     public partial class stockEkle_form : Form
     {
+
+        public event EventHandler DataAdded;
+
         MySqlConnection con;
         public stockEkle_form()
         {
@@ -33,6 +38,7 @@ namespace Oto_Servis
             {
                 cbBirim.Items.Add(read["birimTuru"].ToString());
             }
+            cbBirim.SelectedIndex = 0;
             con.Close();
         }
 
@@ -48,36 +54,81 @@ namespace Oto_Servis
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            string urunAdi, marka, birim, birimFiyat, miktar, barkod, resim;
-            urunAdi = tbUrunAdi.Texts;
-            marka = tbMarka.Texts;
-            birim = cbBirim.Texts;
-            birimFiyat = tbBirimFiyati.Texts;
-            miktar = tbMiktar.Texts;
-            barkod = tbBarkod.Texts;
-            resim = tbResim.Texts;
+            string 
+                urunAdi = tbUrunAdi.Texts, 
+                marka = tbMarka.Texts,
+                birim = cbBirim.Texts, 
+                birimFiyat = tbBirimFiyati.Texts,
+                birimKusurat = tbBirimKusurat.Texts,
+                miktar = tbMiktar.Texts,
+                barkod = tbBarkod.Texts, 
+                resim = tbResim.Texts;
 
             var dateAndTime = DateTime.Now;
             var date = dateAndTime.Date;
             //MessageBox.Show(date.ToString().Split(' ')[0]);
             
-            if(string.IsNullOrEmpty(urunAdi) || string.IsNullOrEmpty(birim) || string.IsNullOrEmpty(birimFiyat))
+            if(string.IsNullOrEmpty(urunAdi) || string.IsNullOrEmpty(birim) || string.IsNullOrEmpty(birimFiyat) || string.IsNullOrEmpty(miktar))
             {
-                MessageBox.Show("Ürün Adı, Birim ve Birim Fiyatı alanları boş bırakılamaz.");
+                MessageBox.Show("Ürün Adı, Birim, Birim Fiyatı ve Miktar alanları boş bırakılamaz.");
                 return;
             }
             else
             {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand($"INSERT INTO stocks (marka, urunAdi, birim, miktar, fiyat, barkod, eklenmeTarihi, urunResim) " +
-                    $"VALUES('{marka}', '{urunAdi}', '{birim}', '{miktar}', '{birimFiyat}', '{barkod}', '{date.ToString("yyyy-MM-dd")}', '{Regex.Escape(resim)}')", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                if (birimFiyat.Substring(0, 1) == "0" || miktar.Substring(0, 1) == "0")
+                {
+                    MessageBox.Show("Fiyat ve miktar alanları 0 ile başlayamaz veya 0 olamaz.");
+                    return;
+                }
+
+                string newFiyat = "";
+
+                try
+                {
+                    int fiyat = int.Parse(birimFiyat);
+                    int kusurat = int.Parse(birimKusurat);
+
+                    newFiyat = fiyat.ToString() + "," + kusurat.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ürün fiyatı ve küsuratı tam sayı olmalı. Rakamlar dışında bir şey yazmayın. Örnek: 300 90");
+                    return;
+                }
+
+
+                if (resim != "")
+                {
+                    string fileExtension = Path.GetExtension(resim);
+                    string randomFileName = Guid.NewGuid().ToString() + fileExtension;
+                    string applicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                    string saveDirectory = Path.Combine(applicationDirectory, "all_images");
+                    if(!Directory.Exists(saveDirectory))
+                    {
+                        Directory.CreateDirectory(saveDirectory);
+                    }
+
+                    string newFilePath = Path.Combine(saveDirectory, randomFileName);
+                    File.Copy(resim, newFilePath, true);
+
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand($"INSERT INTO stocks (marka, urunAdi, birim, miktar, fiyat, barkod, eklenmeTarihi, urunResim) " +
+                        $"VALUES('{marka}', '{urunAdi}', '{birim}', '{miktar}', '{newFiyat}', '{barkod}', '{date.ToString("dd-MM-yy")}', '{Regex.Escape(newFilePath)}')", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+                else
+                {
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand($"INSERT INTO stocks (marka, urunAdi, birim, miktar, fiyat, barkod, eklenmeTarihi, urunResim) " +
+                        $"VALUES('{marka}', '{urunAdi}', '{birim}', '{miktar}', '{newFiyat}', '{barkod}', '{date.ToString("yyyy-MM-dd")}', '{Regex.Escape(resim)}')", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
                 
-                MessageBox.Show("Ürün eklendi");
-                //stock_form frm = new stock_form();
-                //frm.Refresh();
-                Form1.f.Refresh();
+                //MessageBox.Show("Ürün eklendi");
+
+                DataAdded?.Invoke(this, EventArgs.Empty);
                 this.Close();
             }
         }
@@ -107,45 +158,75 @@ namespace Oto_Servis
             }
         }
 
+        bool isFloat = false;
         private void cbBirim_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            /*
-            if (!string.IsNullOrEmpty(tbUrunAdi.Texts))
+
+            string birimAdi = cbBirim.Texts;
+            birimName.Text = birimAdi;
+            tbMiktar.Texts = "";
+            label4.Text = char.ToUpper(birimAdi[0]) + birimAdi.Substring(1).ToLower() + " Fiyatı*";
+            if (birimAdi == "metre" || birimAdi == "litre")
             {
-                if (notStartWithSpace(tbUrunAdi.Texts.ToCharArray()[0]))
-                {
-                    tbUrunAdi.Texts = "";
-                }
+                isFloat = true;
             }
-            */
+            else
+            {
+                isFloat = false;
+            }
         }
 
-        
+        int i = 0;
         private void tbBirimFiyati__TextChanged(object sender, EventArgs e)
         {
-            /*
-            if (!string.IsNullOrEmpty(tbBirimFiyati.Texts))
-            {
-                if (notStartWithSpace(tbBirimFiyati.Texts.ToCharArray()[0]))
-                {
-                    tbUrunAdi.Texts = String.Empty;
-                }
-                if(!string.IsNullOrEmpty(tbBirimFiyati.Texts) && !tbBirimFiyati.Texts.All(char.IsDigit))
-                {
-                    tbBirimFiyati.Texts = tbBirimFiyati.Texts.Remove(tbBirimFiyati.Texts.Length - 1);
-                }
-            }
-            */
+            
         }
 
         private void tbMiktar__TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(tbUrunAdi.Texts))
+            if (tbMiktar.Texts != "")
             {
-                if (notStartWithSpace(tbUrunAdi.Texts.ToCharArray()[0]))
+                if (isFloat)
                 {
-                    tbMiktar.Texts = String.Empty;
+                    try
+                    {
+                        float f = float.Parse(tbMiktar.Texts);
+                    }
+                    catch
+                    {
+                        tbMiktar.Texts = "";
+                        if(cbBirim.Texts == "")
+                        {
+                            MessageBox.Show("Önce birim seçin.");
+                        }
+                        else { 
+                            MessageBox.Show("Seçilen birim: " + cbBirim.Texts + ". Bu birim için sadece ondalık sayı girilebilir. Örnek: 3.14");
+                        }
+                    }
                 }
+                else
+                {
+                    try
+                    {
+                        int i = int.Parse(tbMiktar.Texts);
+                    }
+                    catch
+                    {
+                        tbMiktar.Texts = "";
+                        if (cbBirim.Texts == "")
+                        {
+                            MessageBox.Show("Önce birim seçin.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Seçilen birim: " + cbBirim.Texts + ". Bu birim için sadece tam sayı girilebilir.");
+                        }
+                    }
+                }
+            }
+            else
+            {
+
             }
         }
 
@@ -200,9 +281,16 @@ namespace Oto_Servis
             }
         }
 
-        private void tbBirimFiyati_KeyPress(object sender, KeyPressEventArgs e)
+        private void tbMiktar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //MessageBox.Show("HGere");
+
+           
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Console.WriteLine(e.KeyChar);
         }
     }
 }

@@ -71,12 +71,11 @@ namespace Oto_Servis
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1320, 721);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(990, 586);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -93,14 +92,13 @@ namespace Oto_Servis
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.70833F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.29167F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1312, 172);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(984, 140);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // button1
@@ -110,10 +108,10 @@ namespace Oto_Servis
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(13, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.button1.Location = new System.Drawing.Point(10, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(411, 49);
+            this.button1.Size = new System.Drawing.Size(308, 39);
             this.button1.TabIndex = 47;
             this.button1.Text = "Cari Ekle";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,10 +124,9 @@ namespace Oto_Servis
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(878, 77);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(659, 62);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(430, 91);
+            this.panel3.Size = new System.Drawing.Size(322, 75);
             this.panel3.TabIndex = 11;
             // 
             // label3
@@ -137,10 +134,9 @@ namespace Oto_Servis
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(126, 22);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(94, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 23);
+            this.label3.Size = new System.Drawing.Size(117, 17);
             this.label3.TabIndex = 1;
             this.label3.Text = "Telefon Numarası";
             // 
@@ -150,10 +146,9 @@ namespace Oto_Servis
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(56, 47);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Location = new System.Drawing.Point(42, 38);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(304, 26);
+            this.textBox3.Size = new System.Drawing.Size(229, 22);
             this.textBox3.TabIndex = 0;
             // 
             // panel2
@@ -162,10 +157,9 @@ namespace Oto_Servis
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(441, 77);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(331, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(429, 91);
+            this.panel2.Size = new System.Drawing.Size(322, 75);
             this.panel2.TabIndex = 10;
             // 
             // label2
@@ -173,10 +167,9 @@ namespace Oto_Servis
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(168, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(126, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 23);
+            this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Grup Adı";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,10 +180,9 @@ namespace Oto_Servis
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(55, 47);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(41, 38);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(304, 26);
+            this.textBox2.Size = new System.Drawing.Size(229, 22);
             this.textBox2.TabIndex = 0;
             // 
             // button3
@@ -200,10 +192,10 @@ namespace Oto_Servis
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(887, 12);
-            this.button3.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.button3.Location = new System.Drawing.Point(666, 10);
+            this.button3.Margin = new System.Windows.Forms.Padding(10);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(412, 49);
+            this.button3.Size = new System.Drawing.Size(308, 39);
             this.button3.TabIndex = 8;
             this.button3.Text = "Sil";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -217,10 +209,9 @@ namespace Oto_Servis
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 77);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(3, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(429, 91);
+            this.panel1.Size = new System.Drawing.Size(322, 75);
             this.panel1.TabIndex = 9;
             // 
             // label1
@@ -228,10 +219,9 @@ namespace Oto_Servis
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(183, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(137, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 23);
+            this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cari Adı";
             // 
@@ -241,10 +231,9 @@ namespace Oto_Servis
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(59, 47);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(44, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(304, 26);
+            this.textBox1.Size = new System.Drawing.Size(229, 22);
             this.textBox1.TabIndex = 0;
             // 
             // button2
@@ -254,10 +243,10 @@ namespace Oto_Servis
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(450, 12);
-            this.button2.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.button2.Location = new System.Drawing.Point(338, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(10);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(411, 49);
+            this.button2.Size = new System.Drawing.Size(308, 39);
             this.button2.TabIndex = 6;
             this.button2.Text = "Yenile";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -272,14 +261,13 @@ namespace Oto_Servis
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 184);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 149);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1312, 533);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(984, 434);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // dataGridView1
@@ -301,11 +289,11 @@ namespace Oto_Servis
             this.eklenmeTarihi,
             this.cariKodu});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1304, 525);
+            this.dataGridView1.RowTemplate.Height = 32;
+            this.dataGridView1.Size = new System.Drawing.Size(978, 428);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -375,14 +363,14 @@ namespace Oto_Servis
             this.cariKodu.MinimumWidth = 6;
             this.cariKodu.Name = "cariKodu";
             this.cariKodu.ReadOnly = true;
+            this.cariKodu.Visible = false;
             // 
             // cari_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1320, 721);
+            this.ClientSize = new System.Drawing.Size(990, 586);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "cari_form";
             this.Text = "Cari Sayfası";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.cari_form_FormClosed);

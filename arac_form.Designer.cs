@@ -82,11 +82,9 @@ namespace Oto_Servis
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(4, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1325, 126);
+            this.groupBox1.Size = new System.Drawing.Size(994, 103);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Araç Arama Ve Ekleme";
@@ -103,13 +101,12 @@ namespace Oto_Servis
             this.tableLayoutPanel2.Controls.Add(this.panel3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.aracEkleButton, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 23);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1317, 99);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(988, 82);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
             // panel1
@@ -117,10 +114,9 @@ namespace Oto_Servis
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.ruhsatTextBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(321, 91);
+            this.panel1.Size = new System.Drawing.Size(241, 76);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -130,10 +126,9 @@ namespace Oto_Servis
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(4, 13);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(3, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 25);
+            this.label5.Size = new System.Drawing.Size(179, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Ruhsat Sahibi Arama";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,10 +137,9 @@ namespace Oto_Servis
             // 
             this.ruhsatTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ruhsatTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ruhsatTextBox.Location = new System.Drawing.Point(4, 42);
-            this.ruhsatTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ruhsatTextBox.Location = new System.Drawing.Point(3, 36);
             this.ruhsatTextBox.Name = "ruhsatTextBox";
-            this.ruhsatTextBox.Size = new System.Drawing.Size(312, 30);
+            this.ruhsatTextBox.Size = new System.Drawing.Size(235, 26);
             this.ruhsatTextBox.TabIndex = 7;
             // 
             // panel2
@@ -153,10 +147,9 @@ namespace Oto_Servis
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.plakaTextBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(333, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(250, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 91);
+            this.panel2.Size = new System.Drawing.Size(241, 76);
             this.panel2.TabIndex = 11;
             // 
             // label2
@@ -165,10 +158,9 @@ namespace Oto_Servis
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(4, 13);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 25);
+            this.label2.Size = new System.Drawing.Size(110, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Plaka Arama";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,10 +169,9 @@ namespace Oto_Servis
             // 
             this.plakaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.plakaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.plakaTextBox.Location = new System.Drawing.Point(5, 42);
-            this.plakaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plakaTextBox.Location = new System.Drawing.Point(4, 36);
             this.plakaTextBox.Name = "plakaTextBox";
-            this.plakaTextBox.Size = new System.Drawing.Size(312, 30);
+            this.plakaTextBox.Size = new System.Drawing.Size(235, 26);
             this.plakaTextBox.TabIndex = 1;
             // 
             // panel3
@@ -188,10 +179,9 @@ namespace Oto_Servis
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.sasiNoTextBox);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(662, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(497, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 91);
+            this.panel3.Size = new System.Drawing.Size(241, 76);
             this.panel3.TabIndex = 12;
             // 
             // label3
@@ -200,10 +190,9 @@ namespace Oto_Servis
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(4, 13);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 25);
+            this.label3.Size = new System.Drawing.Size(128, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Şasi No Arama";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,10 +201,9 @@ namespace Oto_Servis
             // 
             this.sasiNoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.sasiNoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sasiNoTextBox.Location = new System.Drawing.Point(3, 42);
-            this.sasiNoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sasiNoTextBox.Location = new System.Drawing.Point(2, 36);
             this.sasiNoTextBox.Name = "sasiNoTextBox";
-            this.sasiNoTextBox.Size = new System.Drawing.Size(312, 30);
+            this.sasiNoTextBox.Size = new System.Drawing.Size(235, 26);
             this.sasiNoTextBox.TabIndex = 3;
             // 
             // aracEkleButton
@@ -231,10 +219,10 @@ namespace Oto_Servis
             this.aracEkleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.aracEkleButton.ForeColor = System.Drawing.Color.White;
             this.aracEkleButton.Image = ((System.Drawing.Image)(resources.GetObject("aracEkleButton.Image")));
-            this.aracEkleButton.Location = new System.Drawing.Point(998, 10);
-            this.aracEkleButton.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.aracEkleButton.Location = new System.Drawing.Point(749, 8);
+            this.aracEkleButton.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.aracEkleButton.Name = "aracEkleButton";
-            this.aracEkleButton.Size = new System.Drawing.Size(308, 79);
+            this.aracEkleButton.Size = new System.Drawing.Size(231, 66);
             this.aracEkleButton.TabIndex = 9;
             this.aracEkleButton.Text = "Araç Kaydı";
             this.aracEkleButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -273,11 +261,11 @@ namespace Oto_Servis
             this.Column28,
             this.Column29});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 138);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 112);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1325, 531);
+            this.dataGridView1.RowTemplate.Height = 32;
+            this.dataGridView1.Size = new System.Drawing.Size(994, 432);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -289,12 +277,11 @@ namespace Oto_Servis
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1333, 673);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 547);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // id
@@ -303,7 +290,8 @@ namespace Oto_Servis
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
             this.id.ReadOnly = true;
-            this.id.Width = 103;
+            this.id.Visible = false;
+            this.id.Width = 82;
             // 
             // Column1
             // 
@@ -311,7 +299,7 @@ namespace Oto_Servis
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 109;
+            this.Column1.Width = 86;
             // 
             // Column2
             // 
@@ -319,7 +307,7 @@ namespace Oto_Servis
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 86;
+            this.Column2.Width = 69;
             // 
             // Column3
             // 
@@ -327,7 +315,7 @@ namespace Oto_Servis
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 78;
+            this.Column3.Width = 63;
             // 
             // Column4
             // 
@@ -335,7 +323,7 @@ namespace Oto_Servis
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 97;
+            this.Column4.Width = 77;
             // 
             // Column19
             // 
@@ -343,7 +331,7 @@ namespace Oto_Servis
             this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
-            this.Column19.Width = 96;
+            this.Column19.Width = 75;
             // 
             // Column5
             // 
@@ -351,7 +339,7 @@ namespace Oto_Servis
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 94;
+            this.Column5.Width = 76;
             // 
             // Column6
             // 
@@ -359,7 +347,7 @@ namespace Oto_Servis
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 95;
+            this.Column6.Width = 76;
             // 
             // Column7
             // 
@@ -367,7 +355,7 @@ namespace Oto_Servis
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 86;
+            this.Column7.Width = 69;
             // 
             // Column8
             // 
@@ -375,7 +363,7 @@ namespace Oto_Servis
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 125;
+            this.Column8.Width = 98;
             // 
             // Column10
             // 
@@ -383,7 +371,7 @@ namespace Oto_Servis
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 96;
+            this.Column10.Width = 76;
             // 
             // Column11
             // 
@@ -391,7 +379,7 @@ namespace Oto_Servis
             this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 70;
+            this.Column11.Width = 58;
             // 
             // Column16
             // 
@@ -399,7 +387,7 @@ namespace Oto_Servis
             this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
-            this.Column16.Width = 116;
+            this.Column16.Width = 92;
             // 
             // Column14
             // 
@@ -407,7 +395,7 @@ namespace Oto_Servis
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
-            this.Column14.Width = 114;
+            this.Column14.Width = 89;
             // 
             // Column15
             // 
@@ -415,7 +403,7 @@ namespace Oto_Servis
             this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
-            this.Column15.Width = 109;
+            this.Column15.Width = 86;
             // 
             // Column17
             // 
@@ -423,7 +411,7 @@ namespace Oto_Servis
             this.Column17.MinimumWidth = 6;
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
-            this.Column17.Width = 94;
+            this.Column17.Width = 75;
             // 
             // Column18
             // 
@@ -431,7 +419,7 @@ namespace Oto_Servis
             this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
-            this.Column18.Width = 93;
+            this.Column18.Width = 74;
             // 
             // Column21
             // 
@@ -439,7 +427,7 @@ namespace Oto_Servis
             this.Column21.MinimumWidth = 6;
             this.Column21.Name = "Column21";
             this.Column21.ReadOnly = true;
-            this.Column21.Width = 132;
+            this.Column21.Width = 103;
             // 
             // Column23
             // 
@@ -447,7 +435,7 @@ namespace Oto_Servis
             this.Column23.MinimumWidth = 6;
             this.Column23.Name = "Column23";
             this.Column23.ReadOnly = true;
-            this.Column23.Width = 109;
+            this.Column23.Width = 84;
             // 
             // Column26
             // 
@@ -455,7 +443,7 @@ namespace Oto_Servis
             this.Column26.MinimumWidth = 6;
             this.Column26.Name = "Column26";
             this.Column26.ReadOnly = true;
-            this.Column26.Width = 168;
+            this.Column26.Width = 129;
             // 
             // Column27
             // 
@@ -463,7 +451,7 @@ namespace Oto_Servis
             this.Column27.MinimumWidth = 6;
             this.Column27.Name = "Column27";
             this.Column27.ReadOnly = true;
-            this.Column27.Width = 143;
+            this.Column27.Width = 110;
             // 
             // Column28
             // 
@@ -471,7 +459,7 @@ namespace Oto_Servis
             this.Column28.MinimumWidth = 6;
             this.Column28.Name = "Column28";
             this.Column28.ReadOnly = true;
-            this.Column28.Width = 159;
+            this.Column28.Width = 123;
             // 
             // Column29
             // 
@@ -479,15 +467,14 @@ namespace Oto_Servis
             this.Column29.MinimumWidth = 6;
             this.Column29.Name = "Column29";
             this.Column29.ReadOnly = true;
-            this.Column29.Width = 134;
+            this.Column29.Width = 80;
             // 
             // arac_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 673);
+            this.ClientSize = new System.Drawing.Size(1000, 547);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "arac_form";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.arac_form_FormClosed);
             this.Load += new System.EventHandler(this.arac_form_Load);

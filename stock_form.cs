@@ -5,6 +5,7 @@
  */
 
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Linq.Expressions;
+using System.Collections;
 
 namespace Oto_Servis
 {
@@ -55,12 +58,11 @@ namespace Oto_Servis
 
             dataGridView1.Columns[0].DefaultCellStyle.BackColor = Color.LightCoral;
             dataGridView1.Columns[1].DefaultCellStyle.BackColor = Color.LightCoral;
-            dataGridView1.Columns[2].DefaultCellStyle.BackColor = Color.PaleGreen;
-            dataGridView1.Columns[3].DefaultCellStyle.BackColor = Color.LightCoral;
+            dataGridView1.Columns[2].DefaultCellStyle.BackColor = Color.LightCoral;
+            dataGridView1.Columns[3].DefaultCellStyle.BackColor = Color.PaleGreen;
             dataGridView1.Columns[4].DefaultCellStyle.BackColor = Color.PaleGreen;
             dataGridView1.Columns[5].DefaultCellStyle.BackColor = Color.PaleGreen;
             dataGridView1.Columns[6].DefaultCellStyle.BackColor = Color.LightCoral;
-            //dataGridView1.Columns[7].DefaultCellStyle.BackColor = Color.LightCoral;
 
             dataGridView1.ClearSelection();
         }
@@ -74,41 +76,14 @@ namespace Oto_Servis
             MySqlDataReader dataReader = cmd.ExecuteReader();
             while (dataReader.Read())
             {
-                dataGridView1.Rows.Add(dataReader["marka"].ToString(), dataReader["urunAdi"].ToString(), dataReader["birim"].ToString(), dataReader["miktar"].ToString(), dataReader["fiyat"].ToString(), dataReader["barkod"].ToString(), dataReader["id"].ToString());
+                dataGridView1.Rows.Add(dataReader["marka"].ToString(), dataReader["urunAdi"].ToString(), dataReader["birim"].ToString(), dataReader["miktar"].ToString(), dataReader["fiyat"].ToString(), dataReader["barkod"].ToString(), dataReader["id"].ToString(), dataReader["urunResim"].ToString());
             }
             con.Close();
         }
 
-        int lastE = -1;
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (lastE == e.RowIndex || e.RowIndex < 0) { return; }
-            lastE = e.RowIndex;
-            getImageSelectedRow(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-        }
-        /*
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if(!stockSecimi)
-            {
-                return;
-            }
-            else
-            {
-                int selectedUrunKodu = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                isEmri_form.stockId = selectedUrunKodu;
-                this.Close();
-            }
-        }
         
-        private void stock_form_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (stockSecimi && isEmri_form.stockId != 0)
-            {
-                isEmri_form.stockKapandi = true;
-            }
-        }
-        */
+
+
         private void getImageSelectedRow(string idOfRow)
         {
             try
@@ -127,19 +102,10 @@ namespace Oto_Servis
             }
         }
 
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+
+        private void Stock_search_box_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            string searchValue = textBox1.Text;
+            string searchValue = Stock_search_box.Text;
             if (string.IsNullOrEmpty(searchValue)) { dataGridView1.ClearSelection(); return; }
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
@@ -174,7 +140,7 @@ namespace Oto_Servis
                 if (!valueResult)
                 {
                     dataGridView1.ClearSelection();
-                    MessageBox.Show("Aradığınız Ürün: " + textBox1.Text, " bulunamadı.");
+                    MessageBox.Show("Aradığınız Ürün: " + Stock_search_box.Text, " bulunamadı.");
                     return;
                 }
             }
@@ -207,20 +173,6 @@ namespace Oto_Servis
             return boolean;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            refresh();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private bool notStartWithSpace(char character)
         {
@@ -319,13 +271,181 @@ namespace Oto_Servis
 
         private void stock_form_SizeChanged(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(ClientSize.Width.ToString() + " " + ClientSize.Height.ToString() );
+            System.Diagnostics.Debug.WriteLine(ClientSize.Width.ToString() + " " + ClientSize.Height.ToString());
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void stockEkle_click(object sender, EventArgs e)
         {
             stockEkle_form ac = new stockEkle_form();
+
+            ac.DataAdded += StockEklendi;
+
             ac.Show();
         }
+
+        private void StockEklendi(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            
+            if(rowIndex >= 0)
+            {
+                string imagePath = dataGridView1.Rows[rowIndex].Cells[7].Value.ToString();
+                if(imagePath != "")
+                {
+                    pictureBox1.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.default_photo1;
+                }
+            }
+        }
+
+        string oldValue = string.Empty;
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int columnIndex = e.ColumnIndex;
+
+            oldValue = dataGridView1.Rows[rowIndex].Cells[columnIndex].Value.ToString();
+        }
+
+        private bool IsValidFloatString(string input)
+        {
+            // Boş giriş kontrolü
+            if (string.IsNullOrWhiteSpace(input))
+                return false;
+
+            // . veya , ile başlama kontrolü
+            if (input.StartsWith(".") || input.StartsWith(","))
+                return false;
+
+            // Virgül kontrolü
+            int commaCount = input.Split(',').Length - 1;
+            if (commaCount != 1)
+                return false;
+
+            // Float olarak pars etme denemesi
+            if (!float.TryParse(input.Replace(",", "."), out float result))
+                return false;
+
+            return true;
+        }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = e.ColumnIndex;
+            int rowIndex = e.RowIndex;
+            if (rowIndex >= 0) { 
+                // DataGridView'deki ilgili hücrenin yeni değerini al
+                string newValue = dataGridView1.Rows[rowIndex].Cells[columnIndex].Value.ToString();
+
+                if (newValue.Substring(0, 1) == "0")
+                {
+                    MessageBox.Show("Miktar ve fiyat alanları 0 ile başlayamaz veya 0 olamaz.");
+                    dataGridView1.Rows[rowIndex].Cells[columnIndex].Value = oldValue;
+                    return;
+                }
+
+                if (columnIndex == 3)
+                {
+                    string birimCellValue = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
+                    if (birimCellValue == "adet")
+                    {
+                        try
+                        {
+                            int adet = int.Parse(newValue);
+
+                            con.Open();
+                            string query = "UPDATE stocks SET miktar = @miktar WHERE id = @id";
+                            MySqlCommand cmd = new MySqlCommand(query, con);
+                            cmd.Parameters.AddWithValue("@miktar", adet);
+                            cmd.Parameters.AddWithValue("@id", dataGridView1.Rows[rowIndex].Cells[6].Value.ToString());
+                            cmd.ExecuteNonQuery();
+                            MySqlDataReader dataReader = cmd.ExecuteReader();
+                            con.Close();
+                        } catch (Exception ex) {
+                            dataGridView1.Rows[rowIndex].Cells[columnIndex].Value = oldValue;
+                            MessageBox.Show("Miktar alanına sadece tam sayı değeri girilebilir. Örnek: 3 veya 5");
+                        }
+                    }
+                    else
+                    {
+                        try
+                        {
+                            if(!IsValidFloatString(newValue))
+                            {
+                                throw new Exception();
+                            }
+
+                            con.Open();
+                            string query = "UPDATE stocks SET miktar = @miktar WHERE id = @id";
+                            MySqlCommand cmd = new MySqlCommand(query, con);
+                            cmd.Parameters.AddWithValue("@miktar", newValue);
+                            cmd.Parameters.AddWithValue("@id", dataGridView1.Rows[rowIndex].Cells[6].Value.ToString());
+                            cmd.ExecuteNonQuery();
+                            MySqlDataReader dataReader = cmd.ExecuteReader();
+                            con.Close();
+                        }
+                        catch (Exception ex)
+                         {
+                            dataGridView1.Rows[rowIndex].Cells[columnIndex].Value = oldValue;
+                            MessageBox.Show("Miktar alanına sadece ondalık sayı ve tam sayı girilebilir. Örnek: 3,5 veya 3");
+                        }
+                    }
+                }
+                if (columnIndex == 4) {
+                    try
+                    {
+                        if (!IsValidFloatString(newValue))
+                        {
+                            throw new Exception();
+                        }
+
+                        con.Open();
+                        string query = "UPDATE stocks SET miktar = @miktar WHERE id = @id";
+                        MySqlCommand cmd = new MySqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@miktar", newValue);
+                        cmd.Parameters.AddWithValue("@id", dataGridView1.Rows[rowIndex].Cells[6].Value.ToString());
+                        cmd.ExecuteNonQuery();
+                        MySqlDataReader dataReader = cmd.ExecuteReader();
+                        con.Close();
+                    } catch (Exception ex) {
+                        dataGridView1.Rows[rowIndex].Cells[columnIndex].Value = oldValue;
+                        MessageBox.Show("Fiyat alanına sadece tam sayı veya ondalık değer girilebilir. Örnek: 335 veya 325,50 veya 3,5");
+                    }
+                }
+
+                if (columnIndex == 5)
+                {
+                    try
+                    {
+                        string barkod = newValue;
+
+                        con.Open();
+                        string query = "UPDATE stocks SET barkod = @barkod WHERE id = @id";
+                        MySqlCommand cmd = new MySqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@barkod", barkod);
+                        cmd.Parameters.AddWithValue("@id", dataGridView1.Rows[rowIndex].Cells[6].Value.ToString());
+                        cmd.ExecuteNonQuery();
+                        MySqlDataReader dataReader = cmd.ExecuteReader();
+                        con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        dataGridView1.Rows[rowIndex].Cells[columnIndex].Value = oldValue;
+                        MessageBox.Show("Barkod yazılırken bir hata ile karşılaşıldı. Bilinmeyen bir tür girildi.");
+                    }
+                }
+            }
+        }
+
+        
     }
 }

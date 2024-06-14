@@ -170,6 +170,12 @@
     <Compile Include="aracEkle_form.Designer.cs">
       <DependentUpon>aracEkle_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="isEmriEkle_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     <EmbeddedResource Include="aracEkle_form.resx">
       <DependentUpon>aracEkle_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="isEmriEkle_form.resx">
       <DependentUpon>isEmriEkle_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,7 +321,9 @@
     <Content Include="images\car.png" />
     <Content Include="images\car64.png" />
     <Content Include="images\cari64.png" />
+    <Content Include="images\default_photo.png" />
     <Content Include="Resources\json.txt" />
+    <Content Include="Resources\otoservis_veritabani.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
